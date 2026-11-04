@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/themes/1.png" />
+  <link rel="apple-touch-icon" href="/themes/1.png" />
+  <script>
+    (function () {
+      var ua = navigator.userAgent || ''
+      var ios = /iP(hone|ad|od)/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+      var safari = ios || (/Safari/i.test(ua) && !/Chrome|Chromium|Android/i.test(ua))
+      if (safari) document.documentElement.classList.add('is-safari')
+      if (ios) document.documentElement.classList.add('is-ios')
+
+      var id = parseInt(localStorage.getItem('mangosign-theme') || '1', 10)
+      if (!id || id < 1 || id > 5) id = 1
+      var src = '/themes/' + id + '.png?v=' + id
+      var squircleN = 4
+
+      function squirclePath(ctx, x, y, size, n) {
+        var cx = x + size / 2
+        var cy = y + size / 2
+        var a = size / 2
+        var b = size / 2
+        var steps = 128
+        var power = 2 / n
+        ctx.beginPath()
+        for (var i = 0; i <= steps; i++) {
+          var t = (i / steps) * Math.PI * 2
+          var cos = Math.cos(t)
+          var sin = Math.sin(t)
+          var px = cx + a * Math.sign(cos) * Math.pow(Math.abs(cos), power)
+          var py = cy + b * Math.sign(sin) * Math.pow(Math.abs(sin), power)
+          if (i === 0) ctx.moveTo(px, py)
+          else ctx.lineTo(px, py)
+        }
+        ctx.closePath()
+      }
+
+      function setLinks(href) {
+        document.querySelectorAll('link[href*="favicon.svg"]').forEach(function (el) {
+          el.remove()
+        })
+        document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]').forEach(function (el) {
+          el.type = 'image/png'
+          el.href = href
+        })
+      }
+
+      function render(size, done) {
+        var img = new Image()
+        img.onload = function () {
+          var c = document.createElement('canvas')
+          c.width = size
+          c.height = size
+          var ctx = c.getContext('2d')
+          squirclePath(ctx, 0, 0, size, squircleN)
+          ctx.clip()
+          ctx.drawImage(img, 0, 0, size, size)
+          done(c.toDataURL('image/png'))
+        }
+        img.onerror = function () {
+          done(src)
+        }
+        img.src = src
+      }
+
+      render(64, function (iconHref) {
+        setLinks(iconHref)
+        render(180, function (appleHref) {
+          var apple = document.querySelector('link[rel="apple-touch-icon"]')
+          if (apple) {
+            apple.href = appleHref
+          }
+        })
+      })
+    })()
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#dceeff" />
+  <meta name="description" content="iOS 签名工具 - 侧载应用签名安装，上传 P12 证书在线签名" />
+  <title>芒果签 · iOS 签名工具</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      min-height: 100dvh;
+      background-color: #e8f4ff;
+    }
+
+    html.is-safari #app-boot-wallpaper .mesh,
+    html.is-ios #app-boot-wallpaper .mesh {
+      filter: blur(40px);
+      opacity: 0.55;
+    }
+
+    #app-boot-wallpaper {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    #app-boot-wallpaper .wallpaper-photo {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255, 120, 180, 0.45) 0%, transparent 45%),
+        linear-gradient(225deg, rgba(80, 160, 255, 0.5) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(120, 255, 200, 0.35) 0%, transparent 40%),
+        linear-gradient(160deg, #e8f4ff 0%, #f5e6ff 35%, #ffe8f0 65%, #d4f0ff 100%);
+    }
+
+    #app-boot-wallpaper .mesh {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.85;
+    }
+
+    #app-boot-wallpaper .mesh-1 {
+      width: min(50vw, 640px);
+      height: min(50vw, 640px);
+      background: radial-gradient(circle, #ff6b9d 0%, transparent 70%);
+      top: -10%;
+      left: -8%;
+    }
+
+    #app-boot-wallpaper .mesh-2 {
+      width: min(45vw, 580px);
+      height: min(45vw, 580px);
+      background: radial-gradient(circle, #4facfe 0%, transparent 70%);
+      top: 20%;
+      right: -10%;
+    }
+
+    #app-boot-wallpaper .mesh-3 {
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(circle, #a18cd1 0%, transparent 70%);
+      bottom: -5%;
+      left: 25%;
+    }
+
+    #app-boot-wallpaper .mesh-4 {
+      width: 35vw;
+      height: 35vw;
+      background: radial-gradient(circle, #43e97b 0%, transparent 70%);
+      bottom: 20%;
+      right: 15%;
+    }
+
+    #app {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      min-height: 100dvh;
+      opacity: 0;
+    }
+
+    html.app-revealed #app {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app-boot-wallpaper" aria-hidden="true">
+    <div class="wallpaper-photo"></div>
+    <div class="mesh mesh-1"></div>
+    <div class="mesh mesh-2"></div>
+    <div class="mesh mesh-3"></div>
+    <div class="mesh mesh-4"></div>
+  </div>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

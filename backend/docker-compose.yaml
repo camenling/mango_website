@@ -1,0 +1,30 @@
+# 芒果签线上 compose（用法见 docs/上线部署.md、pack-prod-deploy.sh）
+# 服务器目录示例：/opt/mangosign（解压 zip 后在此目录 docker compose up -d）
+# 业务目录 ./ 整体挂载为容器 /app（配置 manifest/config、前端 resource/public 等均在宿主机）
+
+services:
+  mangosign:
+    image: mangosign:prod
+    container_name: mangosign
+    restart: unless-stopped
+    ports:
+      - "${MANGOSIGN_PORT:-8199}:8199"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      # 整目录映射：配置、前端 public、base.ipa、signed/temp 均在宿主机 ./ 下维护
+      - ./:/app
+
+  redis:
+    image: redis:7-alpine
+    container_name: mangosign-redis
+    restart: unless-stopped
+    profiles:
+      - redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    volumes:
+      - ./redis-data:/data

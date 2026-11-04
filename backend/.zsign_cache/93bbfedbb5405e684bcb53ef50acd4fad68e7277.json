@@ -1,0 +1,343 @@
+{
+	"bundle_executable": "HillMountPlatform",
+	"bundle_id": "app.iris2912.rain3246",
+	"bundle_version": "1.1.0",
+	"changed": [
+		"libellekit.dylib",
+		"Frameworks/libswift_Concurrency.dylib",
+		"libsubstrate.dylib",
+		"Frameworks/Masonry.framework/_CodeSignature/CodeResources",
+		"Frameworks/Masonry.framework/Masonry",
+		"Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources",
+		"Frameworks/SwiftyJSON.framework/SwiftyJSON",
+		"Frameworks/RxAlamofire.framework/_CodeSignature/CodeResources",
+		"Frameworks/RxAlamofire.framework/RxAlamofire",
+		"Frameworks/NVActivityIndicatorView.framework/_CodeSignature/CodeResources",
+		"Frameworks/NVActivityIndicatorView.framework/NVActivityIndicatorView",
+		"Frameworks/Reachability.framework/_CodeSignature/CodeResources",
+		"Frameworks/Reachability.framework/Reachability",
+		"Frameworks/Kingfisher.framework/_CodeSignature/CodeResources",
+		"Frameworks/Kingfisher.framework/Kingfisher",
+		"Frameworks/CLCamera.framework/_CodeSignature/CodeResources",
+		"Frameworks/CLCamera.framework/CLCamera",
+		"Frameworks/MJRefresh.framework/_CodeSignature/CodeResources",
+		"Frameworks/MJRefresh.framework/MJRefresh",
+		"Frameworks/YYCache.framework/_CodeSignature/CodeResources",
+		"Frameworks/YYCache.framework/YYCache",
+		"Frameworks/Async.framework/_CodeSignature/CodeResources",
+		"Frameworks/Async.framework/Async",
+		"Frameworks/CryptoSwift.framework/_CodeSignature/CodeResources",
+		"Frameworks/CryptoSwift.framework/CryptoSwift",
+		"Frameworks/CocoaAsyncSocket.framework/_CodeSignature/CodeResources",
+		"Frameworks/CocoaAsyncSocket.framework/CocoaAsyncSocket",
+		"Frameworks/JGProgressHUD.framework/_CodeSignature/CodeResources",
+		"Frameworks/JGProgressHUD.framework/JGProgressHUD",
+		"Frameworks/TZImagePickerController.framework/_CodeSignature/CodeResources",
+		"Frameworks/TZImagePickerController.framework/TZImagePickerController",
+		"Frameworks/ASIHTTPRequest.framework/_CodeSignature/CodeResources",
+		"Frameworks/ASIHTTPRequest.framework/ASIHTTPRequest",
+		"Frameworks/AVOSCloud.framework/_CodeSignature/CodeResources",
+		"Frameworks/AVOSCloud.framework/AVOSCloud",
+		"Frameworks/CLPopoverManager.framework/_CodeSignature/CodeResources",
+		"Frameworks/CLPopoverManager.framework/CLPopoverManager",
+		"Frameworks/IQKeyboardManager.framework/_CodeSignature/CodeResources",
+		"Frameworks/IQKeyboardManager.framework/IQKeyboardManager",
+		"Frameworks/FMDB.framework/_CodeSignature/CodeResources",
+		"Frameworks/FMDB.framework/FMDB",
+		"Frameworks/SnapKit.framework/_CodeSignature/CodeResources",
+		"Frameworks/SnapKit.framework/SnapKit",
+		"Frameworks/Alamofire.framework/_CodeSignature/CodeResources",
+		"Frameworks/Alamofire.framework/Alamofire",
+		"Frameworks/LookinServer.framework/_CodeSignature/CodeResources",
+		"Frameworks/LookinServer.framework/LookinServer",
+		"Frameworks/SDWebImage.framework/_CodeSignature/CodeResources",
+		"Frameworks/SDWebImage.framework/SDWebImage",
+		"Frameworks/ColorMatchTabs.framework/_CodeSignature/CodeResources",
+		"Frameworks/ColorMatchTabs.framework/ColorMatchTabs",
+		"Frameworks/Highlightr.framework/_CodeSignature/CodeResources",
+		"Frameworks/Highlightr.framework/Highlightr",
+		"Frameworks/Lottie.framework/_CodeSignature/CodeResources",
+		"Frameworks/Lottie.framework/Lottie",
+		"Frameworks/RxSwift.framework/_CodeSignature/CodeResources",
+		"Frameworks/RxSwift.framework/RxSwift",
+		"Frameworks/SwiftyRSA.framework/_CodeSignature/CodeResources",
+		"Frameworks/SwiftyRSA.framework/SwiftyRSA",
+		"Frameworks/MachOKit.framework/_CodeSignature/CodeResources",
+		"Frameworks/MachOKit.framework/MachOKit",
+		"Frameworks/SwiftDate.framework/_CodeSignature/CodeResources",
+		"Frameworks/SwiftDate.framework/SwiftDate",
+		"Frameworks/YTKKeyValueStore.framework/_CodeSignature/CodeResources",
+		"Frameworks/YTKKeyValueStore.framework/YTKKeyValueStore",
+		"Frameworks/DateToolsSwift.framework/_CodeSignature/CodeResources",
+		"Frameworks/DateToolsSwift.framework/DateToolsSwift",
+		"embedded.mobileprovision"
+	],
+	"files": [
+		"libellekit.dylib",
+		"Frameworks/libswift_Concurrency.dylib",
+		"libsubstrate.dylib"
+	],
+	"folders": [
+		{
+			"bundle_executable": "Masonry",
+			"bundle_id": "org.cocoapods.Masonry",
+			"bundle_version": "1",
+			"path": "Frameworks/Masonry.framework",
+			"sha1": "wGnB8zOGrFRH6JGFaPDYS3bwYIE=",
+			"sha256": "D9/+guOOUuekCa213Zz1EAPtNCqWgMVF1Zued1oGADg="
+		},
+		{
+			"bundle_executable": "SwiftyJSON",
+			"bundle_id": "org.cocoapods.SwiftyJSON",
+			"bundle_version": "1",
+			"path": "Frameworks/SwiftyJSON.framework",
+			"sha1": "gqtIx0MKyigpETtucDqmamUc030=",
+			"sha256": "z+IrfXiufdP2mEvU15TxrlupXL+Y53WSLje+Goxc58g="
+		},
+		{
+			"bundle_executable": "RxAlamofire",
+			"bundle_id": "org.cocoapods.RxAlamofire",
+			"bundle_version": "1",
+			"path": "Frameworks/RxAlamofire.framework",
+			"sha1": "Blkkvwt8d4CBfCMZi0eH4D4k4TM=",
+			"sha256": "Q38j1nSO0N8Zzn6wbWbtwgXmMvM9FxpUyke8oYNC4ms="
+		},
+		{
+			"bundle_executable": "NVActivityIndicatorView",
+			"bundle_id": "org.cocoapods.NVActivityIndicatorView",
+			"bundle_version": "1",
+			"path": "Frameworks/NVActivityIndicatorView.framework",
+			"sha1": "xPFv1+HxgeTohr+woIrOUaxnFxc=",
+			"sha256": "FwCRKXeT+Mh0uhYZAmXc9vhzwuw/YhA6T7U/4w1BI84="
+		},
+		{
+			"bundle_executable": "Reachability",
+			"bundle_id": "org.cocoapods.Reachability",
+			"bundle_version": "1",
+			"path": "Frameworks/Reachability.framework",
+			"sha1": "abRsSZx8nVd1a/muShvVmm7ex1E=",
+			"sha256": "A7zH+TBwYzfm85HsAGB3GvJaph4ZbM7bQmd3jLSBJ0E="
+		},
+		{
+			"bundle_executable": "Kingfisher",
+			"bundle_id": "org.cocoapods.Kingfisher",
+			"bundle_version": "1",
+			"path": "Frameworks/Kingfisher.framework",
+			"sha1": "IeRd6q6RhZZj+hBoMiGr49GhVPw=",
+			"sha256": "rWodxnQQ7qgPbpySkdPW6ChK3W0tR5aJ9mQ0hIl+3ss="
+		},
+		{
+			"bundle_executable": "CLCamera",
+			"bundle_id": "org.cocoapods.CLCamera",
+			"bundle_version": "1",
+			"path": "Frameworks/CLCamera.framework",
+			"sha1": "kshqIdtxQCDMbc/abPr9UHm2cWw=",
+			"sha256": "41rr2NkNct0B0SZxJ9gVKEbo+quJJGoFJOuIWd6UvYU="
+		},
+		{
+			"bundle_executable": "MJRefresh",
+			"bundle_id": "org.cocoapods.MJRefresh",
+			"bundle_version": "1",
+			"path": "Frameworks/MJRefresh.framework",
+			"sha1": "YZ/1vymea2a/qYogiUxTn4OEJmY=",
+			"sha256": "bZzF2jABrgXbYo0p1o76gj0UWnHwnPPWtNt46oEjJQU="
+		},
+		{
+			"bundle_executable": "YYCache",
+			"bundle_id": "org.cocoapods.YYCache",
+			"bundle_version": "1",
+			"path": "Frameworks/YYCache.framework",
+			"sha1": "YsQ6EM67wjmdbvr9YvINvTofsHs=",
+			"sha256": "QDC4XkPZDQyCXA91CabZbEzFg0jPLnbTSeFnfk55MbI="
+		},
+		{
+			"bundle_executable": "Async",
+			"bundle_id": "org.cocoapods.Async",
+			"bundle_version": "1",
+			"path": "Frameworks/Async.framework",
+			"sha1": "K1OMPcCae6nP8cqH/U6z5/D4tnE=",
+			"sha256": "buyRWMNDUpKkRR9+ZczAUL7Ju7bNho/UBN5Vae6WskQ="
+		},
+		{
+			"bundle_executable": "CryptoSwift",
+			"bundle_id": "org.cocoapods.CryptoSwift",
+			"bundle_version": "1",
+			"path": "Frameworks/CryptoSwift.framework",
+			"sha1": "h0GoeY5pPm75Df7/+TL5+/zNI8E=",
+			"sha256": "yLSTZoqvCIBom+9ggUxD29lYao2BJnOPM1jfTXj1qjc="
+		},
+		{
+			"bundle_executable": "CocoaAsyncSocket",
+			"bundle_id": "org.cocoapods.CocoaAsyncSocket",
+			"bundle_version": "1",
+			"path": "Frameworks/CocoaAsyncSocket.framework",
+			"sha1": "SN0rW/nlLLgvRTtEpqPHs1Lt3tc=",
+			"sha256": "+EKCQ5XB8KCUIN0RsBCT8vByTC9JxJ7DHLEvRlEQ1f0="
+		},
+		{
+			"bundle_executable": "JGProgressHUD",
+			"bundle_id": "org.cocoapods.JGProgressHUD",
+			"bundle_version": "1",
+			"path": "Frameworks/JGProgressHUD.framework",
+			"sha1": "ZWwlzY4cP2ySFrWfdgLRwCxP77o=",
+			"sha256": "gsWS6xS857qfXemENDp077BIQKudjZ8mOig5prIes/o="
+		},
+		{
+			"bundle_executable": "TZImagePickerController",
+			"bundle_id": "org.cocoapods.TZImagePickerController",
+			"bundle_version": "1",
+			"path": "Frameworks/TZImagePickerController.framework",
+			"sha1": "jVijKk1wCRhfRchZxbbnVtJKE0E=",
+			"sha256": "a/oNeOIZvxbNYx1a/Xd0OH7n8e5P5vt/PNYBsJl6gYc="
+		},
+		{
+			"bundle_executable": "ASIHTTPRequest",
+			"bundle_id": "org.cocoapods.ASIHTTPRequest",
+			"bundle_version": "1",
+			"path": "Frameworks/ASIHTTPRequest.framework",
+			"sha1": "/Saxj/CwhX8L1AE74oiXOmCZhjc=",
+			"sha256": "tJI1w4wP/kFH/3SkE8WSmODThvzLOLolguMFVW+gIKw="
+		},
+		{
+			"bundle_executable": "AVOSCloud",
+			"bundle_id": "org.cocoapods.AVOSCloud",
+			"bundle_version": "1",
+			"path": "Frameworks/AVOSCloud.framework",
+			"sha1": "rMc60u/VSO04h8A4WNTFmQVQ5jU=",
+			"sha256": "mOfKoO8cT/ETjDTR2OVfGe7xVk21Axs3YXtCY45KEMM="
+		},
+		{
+			"bundle_executable": "CLPopoverManager",
+			"bundle_id": "org.cocoapods.CLPopoverManager",
+			"bundle_version": "1",
+			"path": "Frameworks/CLPopoverManager.framework",
+			"sha1": "kCKUSBA/fvs/PnVfC+tk6jNtEkc=",
+			"sha256": "N7mib+101gwqZIx1+YMjo9B8VfTWcV8+THUcNxHE+Q8="
+		},
+		{
+			"bundle_executable": "IQKeyboardManager",
+			"bundle_id": "org.cocoapods.IQKeyboardManager",
+			"bundle_version": "1",
+			"path": "Frameworks/IQKeyboardManager.framework",
+			"sha1": "/aQCSVbNG18naLiSQrjhR5jebcE=",
+			"sha256": "hUSXHFrF0LCVCI2KmkRPMwXv8NUxJRKuJz6dNyFM0Rc="
+		},
+		{
+			"bundle_executable": "FMDB",
+			"bundle_id": "org.cocoapods.FMDB",
+			"bundle_version": "1",
+			"path": "Frameworks/FMDB.framework",
+			"sha1": "qw6imcr8+i3Z5akmc7bfBDLDFaI=",
+			"sha256": "5JxgTRqtfvYvBhZq9LQMUPiq7+jk33YTVZfXeyoz95k="
+		},
+		{
+			"bundle_executable": "SnapKit",
+			"bundle_id": "org.cocoapods.SnapKit",
+			"bundle_version": "1",
+			"path": "Frameworks/SnapKit.framework",
+			"sha1": "Hi9LbONZAgNt9tkr/0TjL2G1zh0=",
+			"sha256": "ffKDHBu9d/R9xsoA2j4XJJ7eHQrRmHzb4x9m0kmgt8E="
+		},
+		{
+			"bundle_executable": "Alamofire",
+			"bundle_id": "org.cocoapods.Alamofire",
+			"bundle_version": "1",
+			"path": "Frameworks/Alamofire.framework",
+			"sha1": "IfLdiUsP4ogMXngYhm8rWoRhe9U=",
+			"sha256": "7yS/t5E6vWcIL1izYwWhcaIPaWEE3OsW00DPPTYd8jI="
+		},
+		{
+			"bundle_executable": "LookinServer",
+			"bundle_id": "org.cocoapods.LookinServer",
+			"bundle_version": "1",
+			"path": "Frameworks/LookinServer.framework",
+			"sha1": "GYPqYXkyu2Vf/Dp4m9NcMdycBho=",
+			"sha256": "+8EtO94alGIt0hnFqPyoFo3691hWj4bNRIJmN2bgreY="
+		},
+		{
+			"bundle_executable": "SDWebImage",
+			"bundle_id": "org.cocoapods.SDWebImage",
+			"bundle_version": "1",
+			"path": "Frameworks/SDWebImage.framework",
+			"sha1": "85aT3sBGPMpxsivMfzQhG3JOoyU=",
+			"sha256": "CRgHavBiQrJ5tgIlOe0vCVqGP9Hfc1yWcz/ZoojGOYg="
+		},
+		{
+			"bundle_executable": "ColorMatchTabs",
+			"bundle_id": "org.cocoapods.ColorMatchTabs",
+			"bundle_version": "1",
+			"path": "Frameworks/ColorMatchTabs.framework",
+			"sha1": "T03Aebq9NUbGtjgGjpwue0/TmKo=",
+			"sha256": "7uWZDYCsnxp1gxDN1UzmShDjW9zIftvCLUxCyjVl0wc="
+		},
+		{
+			"bundle_executable": "Highlightr",
+			"bundle_id": "org.cocoapods.Highlightr",
+			"bundle_version": "1",
+			"path": "Frameworks/Highlightr.framework",
+			"sha1": "UMNmMdHzeAsroaTvBgCafJq0JKo=",
+			"sha256": "dT9MUFsorM3lVcA9lRzjcBI6gJ5HM70bHtjAyt00RxA="
+		},
+		{
+			"bundle_executable": "Lottie",
+			"bundle_id": "org.cocoapods.Lottie",
+			"bundle_version": "1",
+			"path": "Frameworks/Lottie.framework",
+			"sha1": "RhGXVDqZ68jgXRrSxqYGnlCkfnI=",
+			"sha256": "cfG/qNotgPqRV6VshEK4bhP4QsJ9GA6IRNnEJPXEMPM="
+		},
+		{
+			"bundle_executable": "RxSwift",
+			"bundle_id": "org.cocoapods.RxSwift",
+			"bundle_version": "1",
+			"path": "Frameworks/RxSwift.framework",
+			"sha1": "qGdx5j7enXgr5Jj7JHDt9GIYZ3g=",
+			"sha256": "UaVM7Khg5J5mF7Nz+e5fQbUaELBAj8HwUvIrvGBnY7M="
+		},
+		{
+			"bundle_executable": "SwiftyRSA",
+			"bundle_id": "org.cocoapods.SwiftyRSA",
+			"bundle_version": "1",
+			"path": "Frameworks/SwiftyRSA.framework",
+			"sha1": "O4h7w2rqmOwPe53K8/BFfOZkxmI=",
+			"sha256": "aQOQfpzUUUuZUS+xJmmiemUYrMj9EHzKM00exm99mHE="
+		},
+		{
+			"bundle_executable": "MachOKit",
+			"bundle_id": "net.devaukz.camen",
+			"bundle_version": "1",
+			"path": "Frameworks/MachOKit.framework",
+			"sha1": "Qb9YG8tsF+9Gz7GvOXR0nZOxZB0=",
+			"sha256": "cOypSIIrgpn2YXMhkFnconSlZUE2/qJvl/nlyh64xvU="
+		},
+		{
+			"bundle_executable": "SwiftDate",
+			"bundle_id": "org.cocoapods.SwiftDate",
+			"bundle_version": "1",
+			"path": "Frameworks/SwiftDate.framework",
+			"sha1": "CeilezALr23QpTJ4pKSKdnf3qu8=",
+			"sha256": "lusIJ9dMDhnbvdUvaQAmhmXnWdSXPqa5HraQEXnMrL0="
+		},
+		{
+			"bundle_executable": "YTKKeyValueStore",
+			"bundle_id": "org.cocoapods.YTKKeyValueStore",
+			"bundle_version": "1",
+			"path": "Frameworks/YTKKeyValueStore.framework",
+			"sha1": "JV2hnfoWKOufGbQscWGxCxw11vo=",
+			"sha256": "rQlRTLDJQVUv5WG02wWsVcxr1Pv8CmSW1uULmOk0+l0="
+		},
+		{
+			"bundle_executable": "DateToolsSwift",
+			"bundle_id": "org.cocoapods.DateToolsSwift",
+			"bundle_version": "1",
+			"path": "Frameworks/DateToolsSwift.framework",
+			"sha1": "gLs0dgfCHSi0EF15Q8F95Fv/zaA=",
+			"sha256": "oqKcRxr6nEIkAX9r/C1Wr2h91kTUHyXft4WnOiip9Xg="
+		}
+	],
+	"name": "芒果签",
+	"path": "/",
+	"root": "/Users/camen/camen/芒果签官网ui/backend/resource/public/signed/1lrledn21bzdkej2yx5c2741005shkgx/app/Payload/HillMountPlatform.app",
+	"sha1": "dUUVdtlmFKWRKtOiF/Sgm5oiMNA=",
+	"sha256": "nmtPQ+VMOO9DCStjCgG0GOouxXluoYhWCiMso8MHBa0="
+}

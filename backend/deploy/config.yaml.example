@@ -1,0 +1,38 @@
+# 服务器路径：manifest/config/config.yaml（compose 将 ./ 挂载为 /app）
+# 启用 Redis 时取消注释 redis 段，并用 docker compose --profile redis up -d
+
+server:
+  address: ":8199"
+  serverRoot: "resource/public"
+  clientMaxBodySize: "50MB"
+
+logger:
+  level: "info"
+  stdout: true
+
+# redis:
+#   default:
+#     address: redis:6379
+#     db: 0
+
+sign:
+  authBaseUrl: "https://auth.mangoios.com"
+  authAesKey: "MangoSiteSign2026K7pQ2nR8wL4xH9vB"
+  authChannel: "release"
+  authBundleId: ""
+  ipaCacheDir: "resource/base/cache"
+  # 仅当授权后台没有已发布版本时使用
+  baseIpa: "resource/base/base.ipa"
+  appName: "芒果签"
+  tempDir: "resource/temp"
+  outputDir: "resource/public/signed"
+  signTempDir: "resource/public/signTemp"
+  cleanupCerts: true
+  tempRetentionMinutes: 120
+  cleanupIntervalMinutes: 10
+  siteUrl: "https://请改为你的域名"
+  certMangoKey: "ZdzzTckgNQpSHnuR"
+  useShortInstall: true
+  shortLinkExpireHours: 2
+  plistCacheExpireHours: 2
+  tabIconCacheDir: "resource/base/tab-icons"

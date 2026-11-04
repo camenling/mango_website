@@ -1,0 +1,43 @@
+server:
+  address: ":8199"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  serverRoot: "resource/public"
+  clientMaxBodySize: "50MB"
+
+logger:
+  level: "all"
+  stdout: true
+
+sign:
+  # 授权后台：加密 + IP 白名单后取最新已发布 IPA，再走接口下载缓存
+  authBaseUrl: "https://auth.mangoios.com"
+  authAesKey: "MangoSiteSign2026K7pQ2nR8wL4xH9vB"
+  authChannel: "release"
+  authBundleId: ""
+  ipaCacheDir: "resource/base/cache"
+  # 授权无已发布记录，或查版本失败时的兜底
+  baseIpa: "resource/base/base.ipa"
+  # 签名工具显示名称
+  appName: "芒果签"
+  # 临时文件目录
+  tempDir: "resource/temp"
+  # 签名输出目录（对外提供下载）
+  outputDir: "resource/public/signed"
+  # zsign -t 临时目录根路径；每次签名为 signTempDir/{taskId}/
+  signTempDir: "resource/public/signTemp"
+  # 签名完成后是否删除上传的证书文件
+  cleanupCerts: true
+  # 目录保留时长（分钟）：仅删除「最后活动时间」早于此值的 taskId 子目录
+  tempRetentionMinutes: 120
+  # 扫描间隔（分钟）：每隔多久检查一次，与保留时长无关
+  cleanupIntervalMinutes: 10
+  # 站点对外访问根 URL，用于生成安装链接（部署时修改）
+  siteUrl: "http://localhost:8199"
+  # 内置 cert.mango AES-128 密钥，必须 16 字节，与授权 deviceAuth.certMangoKey 一致
+  certMangoKey: "ZdzzTckgNQpSHnuR"
+  # 返回 https://域名/i/短码 而非冗长 itms-services 链接
+  useShortInstall: true
+  shortLinkExpireHours: 2
+  plistCacheExpireHours: 2
+  tabIconCacheDir: "resource/base/tab-icons"

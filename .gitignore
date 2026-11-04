@@ -1,0 +1,6 @@
+# 全部入库，仅以下不提交：
+# docker buildx 层缓存（35 个 blob 超过 GitHub 单文件 100MB 上限，无法推送）
+backend/build/docker-cache/
+# 打包好的 Docker 镜像 tar 与含镜像的部署 zip，用 pack-prod-deploy.sh 重新生成
+backend/build/docker/
+backend/build/deploy/

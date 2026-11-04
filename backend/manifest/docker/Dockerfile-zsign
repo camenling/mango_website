@@ -1,0 +1,18 @@
+# manifest/docker/Dockerfile-zsign
+ARG BASE_IMAGE=alpine:3.18
+FROM ${BASE_IMAGE} AS zsign-export
+
+RUN --mount=type=cache,target=/var/cache/apk \
+    apk add --no-cache git build-base cmake musl-dev openssl-dev minizip-dev zlib-dev
+
+COPY ./manifest/docker/zsign ./zsign
+WORKDIR /zsign/build/linux
+RUN make clean && make CC=gcc CXX=g++
+
+WORKDIR /output
+RUN cp /zsign/bin/libzsign.so . && \
+    cp -r /zsign/src include && \
+    tar -czvf /tmp/zsign-output.tar.gz .
+
+FROM scratch AS export
+COPY --from=zsign-export /tmp/zsign-output.tar.gz /

@@ -1,0 +1,22 @@
+FROM alpine:3.18
+
+ENV TZ=Asia/Shanghai
+ENV LD_LIBRARY_PATH=/usr/local/lib
+
+RUN --mount=type=cache,target=/var/cache/apk \
+    sed -i 's#https\?://dl-cdn.alpinelinux.org#https://mirrors.aliyun.com#g' /etc/apk/repositories && \
+    apk add --no-cache tzdata musl openssl libstdc++ minizip zlib && \
+    cp /usr/share/zoneinfo/$TZ /etc/localtime && \
+    echo $TZ > /etc/timezone
+
+WORKDIR /app
+
+COPY ./build/zsign/libzsign.so /usr/local/lib/
+COPY ./build/go/main /usr/bin/main
+COPY ./manifest/config/config.yaml /app/manifest/config/config.yaml
+COPY ./resource /app/resource
+RUN chmod +x /usr/bin/main
+
+EXPOSE 8199
+
+CMD ["main"]

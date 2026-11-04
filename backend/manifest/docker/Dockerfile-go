@@ -1,0 +1,32 @@
+# manifest/docker/Dockerfile-go
+ARG BASE_IMAGE=golang:1.23-alpine
+FROM ${BASE_IMAGE} AS go-build
+
+ENV GO111MODULE=on
+ENV GOPROXY=https://goproxy.cn,https://mirrors.aliyun.com/goproxy/,direct
+
+RUN --mount=type=cache,target=/var/cache/apk \
+    sed -i 's#https\?://dl-cdn.alpinelinux.org#https://mirrors.aliyun.com#g' /etc/apk/repositories && \
+    apk add --no-cache musl-dev minizip-dev openssl-dev zlib-dev gcc g++
+
+WORKDIR /app
+
+COPY go.mod go.sum ./
+RUN --mount=type=cache,target=/go/pkg/mod \
+    --mount=type=cache,target=/root/.cache/go-build \
+    go mod download
+
+COPY ./build/zsign/include /usr/local/include/zsign
+COPY ./build/zsign/libzsign.so /usr/local/lib/
+
+COPY . .
+
+RUN --mount=type=cache,target=/go/pkg/mod \
+    --mount=type=cache,target=/root/.cache/go-build \
+    CGO_ENABLED=1 CC=gcc CXX=g++ GOOS=linux GOARCH=amd64 \
+    CGO_CFLAGS="-I/usr/local/include/zsign" \
+    CGO_LDFLAGS="-L/usr/local/lib -lzsign -lminizip" \
+    go build -o /app/main main.go
+
+FROM scratch AS export
+COPY --from=go-build /app/main /main
